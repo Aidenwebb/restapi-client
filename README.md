@@ -30,15 +30,16 @@ Example:
 >> from restapi import Client
 >> api = Client()
 >> ret = api.<endpointname>.get()
->> api.<endpointname>.save(dict_data)
+>> api.<endpointname>.post(dict_data)
 >> ret = api.<endpointname>.get("<the_id>")
->> api.<endpointname>.update("<the_id>", dict_data)
+>> api.<endpointname>.put("<the_id>", dict_data)
 >> api.<endpointname>.delete("<the_id>")
+>> api.<endpointname>.patch("<the_id>", dict_data)
 ```
 
 ## Methods
 
-**save( data )**:
+**post( data )**:
 
  - **data**: dictionary parameter with the record properties
 
@@ -46,7 +47,7 @@ Example:
 
  - **the_id**: The id of the specific record
 
-**update( reg_id, user_data )**
+**put( reg_id, user_data )**
 
  - **reg_id**: The id of the specific record
  - **user_data**: dictionary parameter with properties that will be updated in
@@ -57,6 +58,13 @@ Example:
 
  - **reg_id**: The id of the specific record to be deleted
  - `return`: Nothing
+ 
+ **patch( reg_id, user_data )**
+
+ - **reg_id**: The id of the specific record
+ - **user_data**: dictionary parameter with properties that will be updated in
+ the record
+ - `return`: The updated record
 
 ### OBS:
 
