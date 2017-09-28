@@ -21,8 +21,9 @@ Example:
 from restapi import Client
 api = Client()
 ret = api.<endpointname>.get()
-api.<endpointname>.save(dict_data)
+api.<endpointname>.post(dict_data)
 ret = api.<endpointname>.get("<the_id>")
-api.<endpointname>.update("<the_id>", dict_data)
+api.<endpointname>.put("<the_id>", dict_data)
 api.<endpointname>.delete("<the_id>")
+api.<endpointname>.patch("<the_id>", dict_data)
 
